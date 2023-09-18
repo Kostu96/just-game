@@ -7,6 +7,8 @@ class Tilemap
 public:
     explicit Tilemap(const std::filesystem::path& filename);
     ~Tilemap();
+
+    void render() const;
 private:
     unsigned int m_width, m_height, m_tileWidth, m_tileHeight;
     unsigned int* m_tileData = nullptr;
