@@ -55,7 +55,7 @@
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>SPDLOG_COMPILED_LIB;JNG_WINDOWS;JNG_DEBUG;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <AdditionalIncludeDirectories>..\jng\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -65,7 +65,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>..\jng\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>msdfgen-extd.lib;freetyped.lib;box2dd.lib;yaml-cppd.lib;stbd.lib;luad.lib;msdfgen-cored.lib;msdf-atlas-gend.lib;spdlogd.lib;gladd.lib;glfw3.lib;jngd.lib;imguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>msdfgen-extd.lib;freetyped.lib;box2dd.lib;yaml-cppd.lib;stbd.lib;luad.lib;msdfgen-cored.lib;msdf-atlas-gend.lib;spdlogd.lib;gladd.lib;glfw3d.lib;jngd.lib;imguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -91,6 +91,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="source\game_layer.cpp" />
+    <ClCompile Include="source\pugixml\pugixml.cpp" />
+    <ClCompile Include="source\tilemap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\pugixml\pugiconfig.hpp" />
+    <ClInclude Include="source\pugixml\pugixml.hpp" />
+    <ClInclude Include="source\tilemap.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

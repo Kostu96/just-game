@@ -1,3 +1,5 @@
+#include "tilemap.hpp"
+
 #include <jng/core/entry_point.hpp>
 #include <jng/core/engine.hpp>
 #include <jng/core/layer.hpp>
@@ -9,9 +11,13 @@ class GameLayer :
 	public jng::Layer
 {
 public:
+    GameLayer() :
+        m_tilemap{ "assets/untitled.tmx" }
+    {
 
+    }
 private:
-
+    Tilemap m_tilemap;
 };
 
 class Game :
